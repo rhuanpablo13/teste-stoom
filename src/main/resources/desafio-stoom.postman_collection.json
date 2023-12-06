@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "dec50989-4d4c-4882-bcf7-ee6cd7567c6b",
+		"name": "desafio-stoom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2201737"
+	},
+	"item": [
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "brand-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/brand/1"
+					},
+					"response": []
+				},
+				{
+					"name": "brand-save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\":\"OMO\",\r\n    \"active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/brand"
+					},
+					"response": []
+				},
+				{
+					"name": "brand-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "brand-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"brand\":\"Brilhante\",\r\n    \"active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/brand/1"
+					},
+					"response": []
+				},
+				{
+					"name": "brand-find-all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/brand/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"brand",
+								"all"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "categoria-find-all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/category/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"category",
+								"all"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "categoria-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "categoria-save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\":\"limpeza\",\r\n    \"active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/category"
+					},
+					"response": []
+				},
+				{
+					"name": "category-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\":\"carnes\",\r\n    \"active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/category/1"
+					},
+					"response": []
+				},
+				{
+					"name": "category-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/category/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "product-find-all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/all?active=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"all"
+							],
+							"query": [
+								{
+									"key": "active",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/products/1"
+					},
+					"response": []
+				},
+				{
+					"name": "products-save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\":\"123\",\r\n    \"category\":\"limpeza\",\r\n    \"brand\":\"OMO\",\r\n    \"price\":\"12.99\",\r\n    \"name\":\"sabão em pó\",\r\n    \"active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/products"
+					},
+					"response": []
+				},
+				{
+					"name": "products-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\":\"1234\",\r\n    \"category\":\"limpeza\",\r\n    \"brand\":\"OMO\",\r\n    \"price\":\"12.99\",\r\n    \"name\":\"sabão em pó\",\r\n    \"active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/products/1"
+					},
+					"response": []
+				},
+				{
+					"name": "products-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/products/1"
+					},
+					"response": []
+				},
+				{
+					"name": "products-by-brand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/products/by-brand/sadia"
+					},
+					"response": []
+				},
+				{
+					"name": "products-by-category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/products/by-category/frios"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "historic-price",
+			"item": [
+				{
+					"name": "find-min-price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/historic-price/find-min-price"
+					},
+					"response": []
+				},
+				{
+					"name": "find-max-price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/historic-price/find-max-price"
+					},
+					"response": []
+				},
+				{
+					"name": "find-all-between-date-sku",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/historic-price/find-all-between-date-sku?dataInicioParam=2023-01-01 00:00:00&dataFimParam=2023-12-01 00:00:00&sku=SKU_1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"historic-price",
+								"find-all-between-date-sku"
+							],
+							"query": [
+								{
+									"key": "dataInicioParam",
+									"value": "2023-01-01 00:00:00"
+								},
+								{
+									"key": "dataFimParam",
+									"value": "2023-12-01 00:00:00"
+								},
+								{
+									"key": "sku",
+									"value": "SKU_1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find-all-between-date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/historic-price/find-all-between-date?dataInicioParam=2023-01-01 00:00:00&dataFimParam=2023-12-01 00:00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"historic-price",
+								"find-all-between-date"
+							],
+							"query": [
+								{
+									"key": "dataInicioParam",
+									"value": "2023-01-01 00:00:00"
+								},
+								{
+									"key": "dataFimParam",
+									"value": "2023-12-01 00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/report/all"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
