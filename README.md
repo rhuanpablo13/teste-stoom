@@ -1,3 +1,11 @@
+**Observações do candidato**
+
+- A api possui um swagger que pode ser acessado pela url: http://localhost:8080/api/swagger-ui.html#/
+- Na pasta resources há um arquivo chamado "sql-input.sql" onde adicionei alguns
+  inserts para popular o banco manualmente.
+
+
+
 **Seja bem-vindo candidato!**
 
 Como um desenvolvedor Back-End na Stoom uma das maiores responsabilidades que você vai ter é desenvolver funcionalidades e corrigir bugs em sistemas de e-commerce de larga escala que utilizam Spring Boot. Com base nisso, precisamos de sua ajuda para construir a nossa loja Stoom, que deve conter as seguintes funcionalidades:
